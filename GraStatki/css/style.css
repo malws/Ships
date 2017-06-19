@@ -1,0 +1,237 @@
+.screen{
+	position:absolute;
+	left:420px;
+	top:150px;
+	color:#3A474D;
+}
+ 
+#game{
+ width:1000px;
+ height:559px;
+ border:solid 3px #003366;
+ background-color: powderblue;
+ background-image: url("summer-sea.png");
+}
+
+button{
+	display:block;
+	width:150px;
+	height:50px;
+	background-color: #e5e5e5;
+} 
+
+.menubuttons {
+	position:relative;
+	left:-70px;
+	display:block;
+	margin: 15px;
+	width:300px;
+	height:80px;
+	border-radius: 10px;
+	font-weight: 700;
+    font-size: 32px;    
+    text-shadow: 0px 1px #fff, 0px -1px #262F33;
+	color: #3A474D;
+    text-transform: uppercase;
+    font-family: 'TradeGothicLTStd-BdCn20','PT Sans Narrow';
+} 
+
+.menubuttons:hover span {
+    color: #64edfd;
+    text-shadow: 0px -1px #97A63A;
+    cursor: pointer;
+}
+
+.menubuttons:active {
+    box-shadow:0px 5px 2px 0px rgba(128,128,128,.6);
+	transform: translate(0, 5px);
+}
+
+progress{
+	-webkit-appearance: none;
+	border: 1px solid black;
+	background-color: #f3f3f3;	
+	height: 11px;
+	border-radius: 5px;
+}
+
+progress::-webkit-progress-bar{
+	background-color: #ffffff;
+}
+progress::-webkit-progress-value{
+	background-color: #3366ff;
+	border-radius: 1px;
+}
+progress::-moz-progress-bar{
+	background-color: #3366ff;
+	border: 0;
+	height: 11px;
+	border-right: 1px solid black;
+	border-radius: 5px;
+}
+progress::-ms-fill {
+	background-color: #3366ff;
+	border: 0;
+	height: 11px;
+	border-right: 1px solid black;
+	border-radius: 5px;
+}
+
+textarea {
+   resize: none;
+}
+
+body {
+	font-family: Helvetica;
+}
+
+#high-scores {
+	top:20px;
+}
+
+#player1,#player2 {
+	display:inline-block;
+	height:40px;
+	width:250px;
+	margin-bottom:10px;
+	position:relative;
+	top:-20px;
+	font-size:24px;
+	font-family:'Helvetica';
+}
+#players-name {
+	position:absolute;
+	left: 300px;
+	top: 10px;
+}
+
+#players-name .menubuttons {
+	left: 45px;
+}
+
+label {
+	margin-right:20px;
+	position:relative;
+	top:10px;
+}
+
+#scores {
+	position:relative; 
+	left:-70px; 
+	height:320px; 
+	overflow:auto;
+}
+
+#scorestable {
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  padding:5px;
+  width: 100%;
+}
+
+tr {
+  border-top: 1px solid #C1C3D1;
+  color:#666B85;
+}
+tr:hover td {
+  background:#7293a6;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+  border-bottom: 1px solid #22262e;
+}
+
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-size:18px;
+  border-right: 1px solid #C1C3D1;
+  border-left: 1px solid #C1C3D1;
+}
+
+ul {
+	position:absolute;
+	left: -300px;
+	top: -100px;
+	width: 650px;
+	height: 300px;
+}
+.tabs {
+  float: none;
+  list-style: none;
+  position: relative;
+  margin: 0 0 0 10px;
+  text-align: left;
+}
+.tabs li {  
+  display: inline-block;
+}
+.tabs input[type="radio"] {
+  display:none;
+}
+.tabs .tablab {
+  display: block;
+  padding: 14px 21px;
+  border-radius: 2px 2px 0 0;
+  font-size: 20px;
+  font-weight: normal;
+  background: #ffffff;
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.tabs .tablab:hover {
+  background: #64edfd;
+}
+.tabs .tab-content {
+  z-index: 2;
+  display: none;
+  height: 100%;
+  width: 100%;
+  font-size: 17px;
+  line-height: 25px;
+  padding: 25px;
+  position: absolute;
+  top: 53px;
+  left: 0;
+  background: #7293a6;
+  border-bottom: 1px solid #000000;
+  overflow:auto;
+  color: #ffffff;
+}
+.tabs input[type="radio"]:checked + .tablab {
+  top: 0;
+  padding-top: 17px;
+  background: #7293a6;
+  border: 1px solid #000000;
+  color: #ffffff;
+}
+.tabs input[type="radio"]:checked ~ .tab-content {
+  display: block;
+}
+
+#tab-content2 {
+	font-size:20px;
+}
+figure {
+    display: table;
+}
+figure img, figcaption {
+    display: table-cell;
+    vertical-align: middle;
+}
+figure p {
+	display:block;
+	text-align:center;
+	
+}
+figcaption {
+    padding: 15px;
+}

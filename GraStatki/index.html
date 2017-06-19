@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Ships!</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="icon" href="images/icon.png">
+		
+	</head>
+	<body>
+		<div id="game">
+			<div class="screen" id="main-menu" class="active">
+			<button class="menubuttons" onclick="showScreen('main-menu', 'players-name')"><span>Start!</span></button>
+			<button class="menubuttons" onclick="showScreen('main-menu', 'high-scores')"><span>High scores</span></button>
+			<button class="menubuttons" onclick="showScreen('main-menu', 'about')"><span>About</span></button></div>
+			
+			
+			<div class="screen" id="players-name" class="inactive" style="display:none">
+			<p><label for="player1"> <img src="images/shi1.png"/></label>
+			<input type="text" id="player1" value="Player1" maxlength="9"></p>
+			<p><label for="player2"> <img src="images/shi2.png"/></label>
+			<input type="text" id="player2" value="Player2" maxlength="9"></p>
+			<button class="menubuttons" onclick="showScreen('players-name', 'game-screen')"><span>Start!</span></button>
+			<button class="menubuttons" onclick="showScreen('players-name', 'main-menu')"><span>Main menu</span></button></div>
+			
+			<div class="screen" id="game-screen" class="inactive" style="display:none">
+				<audio id="snd_shot" src="sounds/shot.wav" preload="auto"></audio>
+				<audio id="snd_exp" src="sounds/explosion.wav" preload="auto"></audio>
+				<audio id="snd_expOuch" src="sounds/explosionOuch.wav" preload="auto"></audio>
+				<audio id="snd_splash" src="sounds/splash.wav" preload="auto"></audio>
+			</div>
+
+			<div class="screen" id="high-scores" class="inactive" style="display:none">
+			<h1>High scores</h1>
+			<div id="scores">
+			<table id="scorestable"></table></div>
+			<button class="menubuttons" onclick="showScreen('high-scores', 'main-menu')"><span>Main menu</span></button></div>
+			<div class="screen" id="about" class="inactive" style="display:none">			
+			<ul class="tabs" id="menu">
+			<li>
+			<input type="radio" name="tabs" id="tab1" checked />
+			<label for="tab1" class="tablab">About</label>
+			<div id="tab-content1" class="tab-content">
+			<p>It's late 17th century - the Golden Age of Piracy!</p>
+			<p>From the western Atlantic, around the southern tip of Africa on to India lays a sailing route - the Pirate Round.
+			Pirates who venture into the Indian Ocean are usually met with great fortune, but also with painful cannon shots
+			as the British East India Company ships get better armed escorts. Will pirates still be plundering vessels as they go?
+			Or can they be stopped?</p>
+			<p>Become part of one side of the war and find out who is in charge of the seas!</p>
+			</div>
+			</li>
+			
+			<li>
+			<input type="radio" name="tabs" id="tab2" />
+			<label for="tab2" class="tablab">Controls</label>
+			<div id="tab-content2" class="tab-content">
+			<figure>
+			<figcaption>Move left</figcaption>
+			<p>Power up</p>
+			<img src="images/controls1.png"/>
+			<p>Power down</p>
+			<figcaption>Move right</figcaption>
+			</figure>
+			<figure>
+			<figcaption>Angle down</figcaption>
+			<p><img src="images/controls2.png"/></p>
+			<figcaption>Angle up</figcaption>
+			</figure>
+			<figure>
+			<p><img src="images/controls3.png"/></p>
+			<figcaption>Fire</figcaption>
+			</figure>
+			</div>
+			</li>
+			
+			<li>
+			<input type="radio" name="tabs" id="tab3" />
+			<label for="tab3" class="tablab">Author</label>
+			<div id="tab-content3" class="tab-content">
+			<p>This game is part of the engineering thesis "Using of HTML5, CSS and Javascript for browser game implementation". Thesis supervisor: dr inż. Andrzej Kozik</p>
+			<p>UNIWERSYTET OPOLSKI</p>
+			<p>WYDZIAŁ MATEMATYKI, FIZYKI I INFORMATYKI</p>
+			<p>Instytut Matematyki i Informatyki</p>
+			<p>Malwina Ostaszewska, Opole 2017</p>
+			</div>
+			</li>
+			</ul>
+
+			<button class="menubuttons" onclick="showScreen('about', 'main-menu')"><span>Main menu</span></button></div>
+		</div>
+		<script src="js/ships.js"></script>
+		<script src="js/islands_generator.js"></script>
+		<script src="js/shoot.js"></script>
+		<script src="js/high_scores.js"></script>
+		<script src="js/game.js"></script>
+		
+		
+		
+	</body>
+</html>
